@@ -27,7 +27,7 @@ $(document).ready(function () {
 function loadDataTable(status) {
     dataTable = $('#tblData').DataTable({
         "ajax": {
-            "url": "/Admin/Order/GetAll?status=" + status;
+            "url": "/Admin/Order/GetAll?status=" + status
         },
         "columns": [
             { "data": "id","width": "5%" },
@@ -45,10 +45,10 @@ function loadDataTable(status) {
                         class="btn btn-primary offset-2" ><i class="bi bi-pencil-square"></i>Details</a>
                        
                     </div>
-`
-                },
+                `
+                }, 
                 "width": "15%"
-            },
+            }, 
         ],
     })
 }
