@@ -28,11 +28,7 @@ builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 //builder.Services.AddSingleton<IDbInitializer, DbInitializer>();
-builder.Services.AddAuthentication().AddFacebook(options =>
-{
-    options.AppId = "3394382107550646";
-    options.AppSecret = "01ea42d2042f03bc918592b2e86e6c29";
-});
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = $"/Identity/Account/Login";
